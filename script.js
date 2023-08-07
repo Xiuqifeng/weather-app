@@ -9,8 +9,6 @@ async function checkWeather(city) {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}` );
     let data = await response.json();
 
-    console.log(data)
-
     document.querySelector(".city-name").innerHTML = data.name;
     document.querySelector(".temperature").innerHTML = data.main.temp;
     document.querySelector(".temperature-min").innerHTML = data.main.temp_min;
